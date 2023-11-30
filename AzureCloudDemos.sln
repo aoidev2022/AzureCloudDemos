@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CosmosDb", "CosmosDb", "{57FFAAAB-E744-4EB9-B8BF-F1983F2CE34A}"
+	ProjectSection(SolutionItems) = preProject
+		MyNotes.txt = MyNotes.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cosmicworks-UI", "Cosmicworks-UI\Cosmicworks-UI.csproj", "{E5AACA5E-96A5-4AF6-A64B-343A1DDA01E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5AACA5E-96A5-4AF6-A64B-343A1DDA01E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5AACA5E-96A5-4AF6-A64B-343A1DDA01E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5AACA5E-96A5-4AF6-A64B-343A1DDA01E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5AACA5E-96A5-4AF6-A64B-343A1DDA01E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5AACA5E-96A5-4AF6-A64B-343A1DDA01E8} = {57FFAAAB-E744-4EB9-B8BF-F1983F2CE34A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B131ADA-A5FC-47D9-A011-E3CF4C769F4C}
+	EndGlobalSection
+EndGlobal

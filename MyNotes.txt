@@ -1,0 +1,40 @@
+https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/tutorial-dotnet-web-app
+
+Install a pre-releaseversion of the cosmicworks dotnet tool from NuGet.
+
+dotnet tool install --global cosmicworks --prerelease
+
+---
+Connect your app to Azure Cosmos DB Emulator on Docker. PART 1
+https://libertus.dev/posts/connect-to-cosmosbd-emulator-on-docker/part1/
+
+
+Use the cosmicworks tool to populate your API for NoSQL account with sample product data using the URI and PRIMARY KEY values you recorded earlier in this lab. 
+Those recorded values will be used for the endpoint and key parameters respectively.
+
+$URI="https://localhost:8081"
+$KEY="C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw=="
+$PRIMARY_CONNECTION_STRING="AccountEndpoint=https://localhost:8081/;AccountKey=C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw=="
+
+cosmicworks --datasets product --endpoint $URI --key $KEY
+
+---
+Create a new web application project using the newly installed dotnet new cosmosdbnosql-webapp template.
+
+dotnet new cosmosdbnosql-webapp --name Cosmicworks-UI -f net6.0
+
+---
+USING THE COSMOS DB EMULATOR
+https://learn.microsoft.com/en-us/azure/cosmos-db/emulator
+
+docker pull mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest
+
+docker run --publish 8081:8081 --publish 10250-10255:10250-10255 --interactive --tty mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest
+
+https://localhost:8081/_explorer/index.html
+
+---
+
+https://curl.se/windows/
+
+curl -k https://localhost:8081/_explorer/emulator.pem > emulatorcert.crt
