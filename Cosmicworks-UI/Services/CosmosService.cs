@@ -47,14 +47,9 @@ public class CosmosService : ICosmosService
 
     public async Task<IEnumerable<Product>> RetrieveActiveProductsAsync()
     {
-        string sql = $@"SELECT  p.id, p.categoryId, p.categoryName, p.sku, p.name, p.description, p.price, p.tags
-                        FROM products p
-                        JOIN t IN p.tags
-                        --WHERE t.name = @tagFilter";
+        var queryable = container.GetItemLinqQueryable<Product>();
 
-        var query = new QueryDefinition(query: sql).WithParameter("@tagFilter", "Tag-75");
-
-        using FeedIterator<Product> feed = container.GetItemQueryIterator<Product>(queryDefinition: query);
+        using FeedIterator<Product> feed = queryable.ToFeedIterator();
 
         List<Product> results = [];
 

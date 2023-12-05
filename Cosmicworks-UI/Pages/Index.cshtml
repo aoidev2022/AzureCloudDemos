@@ -11,7 +11,7 @@
         </p>
         <a class="btn btn-outline-light btn-lg" asp-page="/products">
             View all products
-        </a>        
+        </a>
     </div>
 </header>
 <div class="row" data-masonry='{"percentPosition": true }'>
@@ -33,7 +33,7 @@
                 </div>
                 <h6 class="card-footer bg-secondary text-white text-center">
                     <small>
-                        @item.categoryName
+                        @item.category?.name
                     </small>
                 </h6>
             </div>

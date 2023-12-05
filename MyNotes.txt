@@ -38,3 +38,5 @@ https://localhost:8081/_explorer/index.html
 https://curl.se/windows/
 
 curl -k https://localhost:8081/_explorer/emulator.pem > emulatorcert.crt
+
+https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/quickstart-dotnet?tabs=try-free&pivots=azd
